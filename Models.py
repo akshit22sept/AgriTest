@@ -45,9 +45,7 @@ def Predict(image):
     classes_x=np.argmax(predict,axis=1)
     LeafType=GetInfo("AllLeaves",ModelName,AllClasses)[int(classes_x)]
     e=predict[0]*100
-    sns.barplot(y=GetInfo("AllLeaves",ModelName,AllClasses), x=e)
-
-    plt.show()
+    
     print([i for i in e if i>1])
     if [i for i in ModelName if LeafType in ModelName]:
         predictDis=GetInfo(LeafType,ModelName,Model).predict(a1)
