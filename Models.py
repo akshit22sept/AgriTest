@@ -26,10 +26,11 @@ def GetInfo(Name,NameList,ModelList):
 
 ModelName=[]
 Model=[]
-m=load_model("AllLeavesTesting.h5")
+m=load_model("Models\\AllLeavesTesting.h5")
 for i in os.listdir("Models"):
-    ModelName.append(i.split("Model")[0])
-    Model.append(load_model(f"Models\\{i}"))
+    if i !="AllLeavesTesting.h5":
+        ModelName.append(i.split("Model")[0])
+        Model.append(load_model(f"Models\\{i}"))
 '''
 f=AllLeavesClasses[randint(0,18)]
 c=f.lower()
