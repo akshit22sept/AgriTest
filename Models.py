@@ -28,7 +28,7 @@ ModelName=[]
 Model=[]
 m=load_model("Models\\AllLeavesTesting.h5")
 for i in os.listdir("Models"):
-    if i !="AllLeavesTesting.h5":
+    if not "testing" in i.lower():
         ModelName.append(i.split("Model")[0])
         Model.append(load_model(f"Models\\{i}"))
 '''
