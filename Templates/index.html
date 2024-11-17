@@ -1,16 +1,32 @@
 {% extends "base.html" %}
 
 {% block body %}
-    <h1>Upload new File</h1>
-    <form method=post enctype=multipart/form-data>
-      <input type=file name=file>
-      <input type=submit value=Upload>
-    </form>
-<div class="pred">
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo">
+                <div class="logo"></div>
+            </div>
+            <div class="nav-links">
+                <ul class="ul">
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Detection">Detection of Leaf</a></li>
+                    <li><a href="#About">Prediction of disease</a></li>
+                    <li><a href="#Contact">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
 
-{% if pred %}
-Prediction : {{ pred }}
-{% endif %}
-</div>
 
+    <!-- Home Section -->
+    <section id="Home" class="home-section">
+        <div class="container">
+            <div class="bg-color"></div>
+            <h1>Welcome to Agritest</h1>
+            <p>We detect whether the plant leaf is healthy or not by using CNN & AI</p>
+        </div>
+    </section>
+
+</body>
 {% endblock %}
