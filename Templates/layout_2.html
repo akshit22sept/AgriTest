@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload Template</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('static/images/leaf-background.jpg'); /* Update path here */
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        .container {
+            text-align: center;
+            margin-top: 10%;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .container h1 {
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+        .upload-box {
+            margin-top: 10px;
+        }
+        .upload-box input[type="file"] {
+            display: block;
+            margin: 0 auto;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Your Image</h1>
+        <p>Select an image to upload.</p>
+        <div class="upload-box">
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                <input type="file" name="image" accept="image/*" required>
+                <br><br>
+                <button type="submit" style="
+                    background-color: #4CAF50; 
+                    color: white; 
+                    padding: 10px 20px; 
+                    border: none; 
+                    border-radius: 5px; 
+                    cursor: pointer;">Upload</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
