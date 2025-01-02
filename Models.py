@@ -39,11 +39,9 @@ a=imread(f"Valid\\{c}\\{choice(os.listdir(f"Valid\\{c}\\"))}")
 print(c)
 '''
 
-a=imread(f"TESTING\\WheatHealthy1.png")
-print(ModelName)
 
-
-def Predict(image):
+def Predict(i):
+    image = imread(i)
     a = resize(image, [255, 255], anti_aliasing=True)
     a1 = np.expand_dims(a, axis=0)
     predict=GetInfo("AllLeaves",ModelName,Model).predict(a1)
@@ -69,12 +67,6 @@ def Predict(image):
         predictDis=GetInfo(LeafType,ModelName,Model).predict(a1)
         ClassDis = np.argmax(predictDis, axis=1)
         Dis = GetInfo(LeafType,ModelName,AllClasses)[int(ClassDis)]
-        return f"  Leaf Type = {LeafType}",f"  Condition = {Dis}"
+        return LeafType,Dis
     else:
-        return f"  Leaf Type = {LeafType}","  Not enough information about this plant"
-
-
-
-Pred,Dis=Predict(a)
-
-print(Pred,Dis)
+        return LeafType,"Not enough information about this plant"

@@ -96,6 +96,24 @@
 
      background-color: #708238;  /*667c26 */
 }
+.pred-section {
+    height: 90vh;  /*83.56*/
+    width: 100%;
+    background-image: url("/static/images/predbg.jpg");  /* mistake of one slash / /static/images/new-logo.png*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+
+     background-color: #708238;  /*667c26 */
+}
 
 .home-section h1 {
     font-size: 3.7em;
