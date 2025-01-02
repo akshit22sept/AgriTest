@@ -1,9 +1,16 @@
 {% extends "base.html" %}
 
 {% block body %}
+<section class="pred-section">
 {% if pred %}
-Prediction : {{ pred }}
+<div align="center">
+    <B style="font-size:35px">Prediction : {{ pred }}</B>
+</br>
+    <B style="font-size:35px">Disease : {{ dis }}</B>
+</div>
+{% else %}
+no pred
 {% endif %}
 
-
+</section>
 {% endblock %}
