@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple Disease Solutions</title>
-    <link rel="stylesheet" href=/static/styles/style.css>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block body %}
 
 <header>
     <h1> Apple Disease Solutions</h1>
@@ -22,6 +16,4 @@
     <li><a href="/Solutions/cedar_apple_rust">Cedar Apple Rust</a></li>
     <li><a href="/Solutions/healthy">Healthy (No Disease)</a></li>
 </ul>
-
-</body>
-</html>
+{% endblock %}
