@@ -51,6 +51,22 @@ def predAll():
 def solutions():
     return render_template("Solutions.html")
 
+@app.route("/solutions/apple_scab")
+def apple_scab():
+    return render_template("apple_scab.html")
+
+@app.route("/solutions/black_rot")
+def black_rot():
+    return render_template("black_rot.html")
+
+@app.route("/solutions/cedar_apple_rust")
+def cedar_apple_rust():
+    return render_template("cedar_apple_rust.html")
+
+@app.route("/solutions/healthy")
+def healthy():
+    return render_template("healthy.html")
+
 @app.route("/output/<pred>+<dis>")
 def output(pred,dis):
     print(pred,dis)
