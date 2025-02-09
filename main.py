@@ -47,9 +47,13 @@ def predAll():
 
     return render_template("layout_2.html")
 
+@app.route("/solutions/")
+def solutions():
+    return render_template("Solutions.html")
+
 @app.route("/output/<pred>+<dis>")
 def output(pred,dis):
     print(pred,dis)
-    return render_template("pred.html", pred=pred, dis=dis)
+    return render_template("pred2.html", pred=pred, dis=dis)
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port="5000")
