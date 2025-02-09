@@ -9,6 +9,34 @@
     {% block head %}
     {% endblock head %}
 </head>
+<style>
+    .navbar {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  background-color: darkgreen;
+  color: white;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+  background-color: darkgreen;
+  color:block;
+}
+</style>
 <body>
  <header>
         <div class="navbar">
@@ -20,6 +48,7 @@
                     <li><a href='{{ url_for("home") }}'>Home</a></li>
                     <li><a href="#Detection">Detection of Leaf</a></li>
                     <li><a href='{{ url_for("predAll") }}'>Prediction of disease</a></li>
+                     <li><a href='{{ url_for("solutions") }}'>Solutions for plant  Diseases</a></li>
                     <li><a href="#Contact">About Us</a></li>
                 </ul>
             </div>
