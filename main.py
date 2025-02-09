@@ -63,9 +63,6 @@ def black_rot():
 def cedar_apple_rust():
     return render_template("cedar_apple_rust.html")
 
-@app.route("/solutions/healthy")
-def healthy():
-    return render_template("healthy.html")
 
 @app.route("/output/<pred>+<dis>")
 def output(pred,dis):

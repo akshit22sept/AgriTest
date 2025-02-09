@@ -1,19 +1,12 @@
-<html lang="en">
-<head>
+{% extends "base.html" %}
+{% block head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cedar Apple Rust Solution</title>
     <link rel="stylesheet" href="/static/styles/style.css">
-</head>
-<body>
 
-<header>
-    <nav>
-        <a href="/">Home</a> |
-        <a href="/Solutions">Back to Solutions</a> |
-        <a href="/Solutions/healthy">Next: Healthy</a>
-    </nav>
-</header>
+{% endblock %}
+{% block body %}
 
 <h1> Cedar Apple Rust Solution</h1>
 <p><strong>Cause:</strong> A fungal disease caused by *Gymnosporangium juniperi-virginianae*.</p>
@@ -23,6 +16,4 @@
     <li>Use fungicides containing myclobutanil or sulfur.Copper and sulfur products can be used as well. Spray trees and shrubs when flower buds first emerge until spring weather becomes consistently warm and dry.</li>
     <li>Plant disease-resistant apple varieties.</li>
 </ul>
-
-</body>
-</html>
+{% endblock %}
