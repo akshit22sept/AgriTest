@@ -27,14 +27,14 @@
 
 /* Change the color of links on hover */
 .navbar a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: darkgreen;
+  color: white;
 }
 
 /* Add a color to the active/current link */
 .navbar a.active {
-  background-color: #04AA6D;
-  color: white;
+  background-color: darkgreen;
+  color:block;
 }
 </style>
 <body>
@@ -48,7 +48,6 @@
                     <li><a href='{{ url_for("home") }}'>Home</a></li>
                     <li><a href="#Detection">Detection of Leaf</a></li>
                     <li><a href='{{ url_for("predAll") }}'>Prediction of disease</a></li>
-                    <li><a href='{{ url_for("solutions") }}'>Solutions</a></li>
                     <li><a href="#Contact">About Us</a></li>
                 </ul>
             </div>
