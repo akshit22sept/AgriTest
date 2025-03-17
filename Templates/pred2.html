@@ -1,23 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% extends "base.html" %}
+{% block head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prediction Page</title>
     <link rel="icon" href="C:\Users\geeta\Downloads\Vista Logos\logo.png" type="image/x-icon" />
-</head>
+
+
     <style>
         h3 {
             color: darkgreen;
             text-align: center;
-            margin top: 170px;
-            font-size: 25px;
+            margin top: 100px;
+            font-size: 35px;
         }
         h2 {
             color: black;
             text-align: center;
-            margin-top: 150px;
-            font-size: 40px;
+            margin-top: 80px;
+            font-size: 50px;
         }
         .topnav {
   background-color: #333;
@@ -56,17 +56,22 @@
         
     </style>
     
-
-<body>
+{% endblock %}
+{% block body %}
+<section class="pred2">
         {% if pred %}
-
+        <strong>
         <h2> RESULT
              </h2>
         <h3>Leaf Type: {{ pred }} </h3>
         <h3> Disease Detected: {{ dis }}</h3>
         <h3></h3>
-        {% else %}
-        no pred
         {% endif %}
-</body>
-</html>
+        {% set d=['Apple_scab', 'Black_rot', 'Cedar_apple_rust'] %}
+        {% if dis in d %}
+        <h3><a href='{{ url_for(dis.lower())}}'>Suggested Solution</a></h3>
+
+        {% endif %}
+        </strong>
+</section>
+{% endblock %}

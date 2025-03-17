@@ -96,6 +96,16 @@
 
      background-color: #708238;  /*667c26 */
 }
+.pred2 {
+    padding: 100px 20px;
+    height: 100vh;  /*83.56*/
+    width: 100%;
+    background-image: url("/static/images/pb2.jpeg");  /* mistake of one slash / /static/images/new-logo.png*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
 .pred-section {
     height: 90vh;  /*83.56*/
     width: 100%;

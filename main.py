@@ -47,6 +47,11 @@ def predAll():
 
     return render_template("layout_2.html")
 
+@app.route("/output/<pred>+<dis>")
+def output(pred,dis):
+    print(pred,dis)
+    return render_template("pred2.html", pred=pred, dis=dis)
+
 @app.route("/solutions/")
 def solutions():
     return render_template("Solutions.html")
@@ -63,13 +68,11 @@ def black_rot():
 def cedar_apple_rust():
     return render_template("cedar_apple_rust.html")
 
-@app.route("/solutions/healthy")
-def healthy():
-    return render_template("healthy.html")
+@app.route("/test")
+def test():
+    return render_template("test.html")
 
-@app.route("/output/<pred>+<dis>")
-def output(pred,dis):
-    print(pred,dis)
-    return render_template("pred2.html", pred=pred, dis=dis)
+
+
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port="5000")

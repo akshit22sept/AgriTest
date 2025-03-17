@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Rot Solution</title>
-    <link rel="stylesheet" href="/static/styles/style.css">
-</head>
-<body>
+{% extends "base2.html" %}
 
-<header>
-    <nav>
-        <a href="/">Home</a> |
-        <a href="/Solutions">Back to Solutions</a> |
-        <a href="/Solutions/cedar_apple_rust">Next: Cedar Apple Rust</a>
-    </nav>
-</header>
+{% block body1 %}
 
 <h1> Black Rot Solution</h1>
 <p><strong>Cause:</strong> A fungal disease caused by *Botryosphaeria obtusa*.</p>
@@ -26,6 +12,4 @@
         Do not plant eastern red cedar and juniper within a few hundred yards of apples, hawthorns, and other plants from the Rosaceae family.
         Disease-resistant varieties are available for some plants.</li>
 </ul>
-
-</body>
-</html>
+{% endblock %}
