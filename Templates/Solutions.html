@@ -1,18 +1,28 @@
-{% extends "base.html" %}
+{% extends "base2.html" %}
 
-{% block body %}
+{% block body1 %}
+<style>
+    .button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+</style>
 
 <header>
     <h1> Apple Disease Solutions</h1>
-    <nav>
-        <a href="/">Home</a>
-    </nav>
 </header>
 
 <h2>Select a disease to view its solution:</h2>
 <ul>
-    <li><a href='{{ url_for("apple_scab") }}'>Apple Scab</a></li>
-    <li><a href='{{ url_for("black_rot") }}'>Black Rot</a></li>
-    <li><a href='{{ url_for("cedar_apple_rust") }}'>Cedar Apple Rust</a></li>
+    <li><a href='{{ url_for("apple_scab") }}'><button>Apple Scab</button></a></li>
+    <li><a href='{{ url_for("black_rot") }}'><button>Black Rot</button></a></li>
+    <li><a href='{{ url_for("cedar_apple_rust") }}'><button>Cedar Apple Rust</button></a></li>
 </ul>
 {% endblock %}
